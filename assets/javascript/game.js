@@ -4,3 +4,8 @@ var SimpsonsCharacters = ["Homer", "Marge", "Bart", "Lisa", "Maggie", "Grandpa S
 
 //Set the counters for number of wins and number of losses
 var wins = 0, losses = 0;
+
+
+
+
+
