@@ -9,3 +9,15 @@ var wins = 0, losses = 0;
 var guesses = [];
 
 
+//Display the characters
+var userText = document.getElementById("user-text");
+console.log(userText);
+
+
+document.onkeyup = function(event){
+    userText.innerHTML = event.key;
+}
+
+
+
+
