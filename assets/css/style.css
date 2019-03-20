@@ -8,3 +8,7 @@ h1{
     font-family: 'Akbar';
     src: url("https://fontmeme.com/fonts/simpsonfont-font/");
 }
+
+body{
+    background-color: blue;
+}
