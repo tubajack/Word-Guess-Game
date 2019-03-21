@@ -15,8 +15,29 @@ console.log(userText);
 
 
 document.onkeyup = function(event){
-    userText.innerHTML = event.key;
+    //var node = document.createElement("DIV");
+    var textnode = document.createTextNode(event.key);
+    //node.appendChild(textnode);
+    userText.appendChild(textnode);
+
+    //var node = document.createElement("LI");                 // Create a <li> node
+    //var textnode = document.createTextNode("Water");         // Create a text node
+    //node.appendChild(textnode);                              // Append the text to <li>
+    //document.getElementById("myList").appendChild(node);     // Append <li> to <ul> with id="myList"
+
+    //userText.appendChild(event.key);
+
+    //$("#user-text").append(event.key);
+
+    //Add on to the guess array
+    guesses.push(event.key);
+
+    for(var i = 0; i < guesses.length; i++){
+        //console.log(guesses[i]);
+    }
 }
+
+
 
 
 
