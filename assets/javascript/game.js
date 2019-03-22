@@ -1,6 +1,6 @@
 //Display a list of the Simpsons Characters
 var SimpsonsCharacters = ["Homer", "Marge", "Bart", "Lisa", "Maggie", "Abe Simpson", "Ralph Wiggum", "Milhouse", "Mr Burns", "Moe Syzlak", 
-"Principal Skinner","Groundskeeper Willie", "Patty", "Selma", "Nelson"];
+"Principal Skinner","Groundskeeper Willie", "Patty", "Selma", "Nelson", "Edna Krabappel"];
 
 var characterClues = ["Catchphrase is 'Doh'", 
 "Has tall blue hair", 
@@ -13,7 +13,8 @@ var characterClues = ["Catchphrase is 'Doh'",
 "Owner of the Springfield Nuclear Power Plant. Boss of Homer Simpson.",
 "Bartender. Homer Simpson is a frequent visitor to his bar.",
 "Principal of Springfield Elementary School. Has an unhealthy dependence on his mother.",
-"Groundskeeper of Springfield Elementary School. Is of Scottish descent. Lives in a shack on school property."
+"Groundskeeper of Springfield Elementary School. Is of Scottish descent. Lives in a shack on school property.",
+"One of Marge Simpson's twin sisters. Has an afro. Wears triangular earrings.",
 ];
 
 
