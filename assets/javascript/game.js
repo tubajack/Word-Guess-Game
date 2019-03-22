@@ -3,7 +3,8 @@ var SimpsonsCharacters = ["Homer", "Marge", "Bart", "Lisa", "Maggie", "Grandpa S
 
 
 //Set the counters for number of wins and number of losses
-var wins = 0, losses = 0;
+var wins = 0
+var losses = 0;
 
 //Declare an empty array for the characters inputted. Add to the array once you guess a letter
 var guesses = [];
