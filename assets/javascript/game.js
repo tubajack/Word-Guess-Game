@@ -17,7 +17,7 @@ var characterClues = ["Catchphrase is 'Doh'",
 "One of Marge Simpson's twin sisters. Has an afro. Wears triangular earrings. Is a lesbian.",
 "The older of Marge's two twin sisters. Longs for male companionship.",
 "One of the bullies at Springfield Elementary. Catchphrase is 'Ha-Ha'",
-
+"Bart and Milhouse's teacher at Springfield Elementary School. Is desperate for a man"
 ];
 
 
