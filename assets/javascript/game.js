@@ -7,6 +7,7 @@ var wins = 0, losses = 0;
 
 //Declare an empty array for the characters inputted. Add to the array once you guess a letter
 var guesses = [];
+var letterguess = 0;
 
 
 //Display the characters
@@ -15,15 +16,26 @@ console.log(userText);
 
 
 document.onkeyup = function(event){
+    letterguess++;
 
-    //var node = document.createElement("DIV");
-    var textnode = document.createTextNode(event.key + ",");
+    if(letterguess === 1){
+        var textnode = document.createTextNode(event.key);
+    }
+    else{
+        //var node = document.createElement("DIV");
+        var textnode = document.createTextNode("," + event.key);
+
+    }
+
+
     //node.appendChild(textnode);
     userText.appendChild(textnode);
-
     
     //Add on to the guess array
     guesses.push(event.key);
+
+    //Make all guesses uppercase
+    textnode.toUpperCase();
 
     for(var i = 0; i < guesses.length; i++){
         //console.log(guesses[i]);
