@@ -1,5 +1,13 @@
 //Display a list of the Simpsons Characters
-var SimpsonsCharacters = ["Homer", "Marge", "Bart", "Lisa", "Maggie", "Grandpa Simpson", "Ralph Wiggum", "Milhouse", "Mr Burns", "Moe"];
+var SimpsonsCharacters = ["Homer", "Marge", "Bart", "Lisa", "Maggie", "Abe Simpson", "Ralph Wiggum", "Milhouse", "Mr Burns", "Moe", "Principal Skinner",
+"Groundskeeper Willie", "Patty", "Selma", "Nelson"];
+var characterClues = ["Catchphrase is 'Doh'", 
+"Has tall blue hair", 
+"Mischievous prankster. Son of Homer and Marge", 
+"Plays the saxophone. Most intellecutal Simpson",
+"Sucks on a red pacificer. Trips over clothing and falls on face constantly. ",
+"Father of Homer Simpson. Tells many long, rambling, and incoherent stories.",
+]
 
 
 //Set the counters for number of wins and number of losses
@@ -13,7 +21,7 @@ var letterguess = 0;
 
 //Display the characters
 var userText = document.getElementById("user-text");
-console.log(userText);
+//console.log(userText);
 
 
 document.onkeyup = function(event){
