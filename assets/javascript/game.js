@@ -8,7 +8,8 @@ var characterClues = ["Catchphrase is 'Doh'",
 "Sucks on a red pacificer. Trips over clothing and falls on face constantly. ",
 "Father of Homer Simpson. Tells many long, rambling, and incoherent stories.",
 "Oddball. Has very erratic behavior. Son of the Springfield Police Chief. Is good friends with Lisa Simpson",
-"Best friend of Bart Simpson. Wears thick eyeglasses. One of the few characters to have eyebrows."
+"Best friend of Bart Simpson. Wears thick eyeglasses. One of the few characters to have eyebrows.",
+"Owner of the Springfield Nuclear Power Plant. Boss of Homer Simpson. "
 ];
 
 
