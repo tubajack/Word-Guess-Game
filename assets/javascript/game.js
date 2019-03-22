@@ -9,7 +9,8 @@ var characterClues = ["Catchphrase is 'Doh'",
 "Father of Homer Simpson. Tells many long, rambling, and incoherent stories.",
 "Oddball. Has very erratic behavior. Son of the Springfield Police Chief. Is good friends with Lisa Simpson",
 "Best friend of Bart Simpson. Wears thick eyeglasses. One of the few characters to have eyebrows.",
-"Owner of the Springfield Nuclear Power Plant. Boss of Homer Simpson. "
+"Owner of the Springfield Nuclear Power Plant. Boss of Homer Simpson.",
+"Bartender. Homer Simpson is a frequent visitor to his bar."
 ];
 
 
