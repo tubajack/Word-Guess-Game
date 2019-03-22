@@ -24,9 +24,7 @@ document.onkeyup = function(event){
     else{
         //var node = document.createElement("DIV");
         var textnode = document.createTextNode("," + event.key);
-
     }
-
 
     //node.appendChild(textnode);
     userText.appendChild(textnode);
@@ -35,7 +33,7 @@ document.onkeyup = function(event){
     guesses.push(event.key);
 
     //Make all guesses uppercase
-    textnode.toUpperCase();
+    userText.style.textTransform = "uppercase";
 
     for(var i = 0; i < guesses.length; i++){
         //console.log(guesses[i]);
