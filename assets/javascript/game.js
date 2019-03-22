@@ -14,7 +14,8 @@ var characterClues = ["Catchphrase is 'Doh'",
 "Bartender. Homer Simpson is a frequent visitor to his bar.",
 "Principal of Springfield Elementary School. Has an unhealthy dependence on his mother.",
 "Groundskeeper of Springfield Elementary School. Is of Scottish descent. Lives in a shack on school property.",
-"One of Marge Simpson's twin sisters. Has an afro. Wears triangular earrings.",
+"One of Marge Simpson's twin sisters. Has an afro. Wears triangular earrings. Is a lesbian.",
+"The older of Marge's two twin sisters. Longs for male companionship."
 ];
 
 
