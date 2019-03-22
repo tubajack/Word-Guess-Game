@@ -15,7 +15,9 @@ var characterClues = ["Catchphrase is 'Doh'",
 "Principal of Springfield Elementary School. Has an unhealthy dependence on his mother.",
 "Groundskeeper of Springfield Elementary School. Is of Scottish descent. Lives in a shack on school property.",
 "One of Marge Simpson's twin sisters. Has an afro. Wears triangular earrings. Is a lesbian.",
-"The older of Marge's two twin sisters. Longs for male companionship."
+"The older of Marge's two twin sisters. Longs for male companionship.",
+"One of the bullies at Springfield Elementary. Catchphrase is 'Ha-Ha'",
+
 ];
 
 
