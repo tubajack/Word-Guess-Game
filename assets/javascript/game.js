@@ -7,6 +7,7 @@ var characterClues = ["Catchphrase is 'Doh'",
 "Plays the saxophone. Most intellecutal Simpson",
 "Sucks on a red pacificer. Trips over clothing and falls on face constantly. ",
 "Father of Homer Simpson. Tells many long, rambling, and incoherent stories.",
+"Oddball. Has very erratic behavior. Son of the Springfield Police Chief."
 ]
 
 
