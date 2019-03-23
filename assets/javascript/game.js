@@ -25,6 +25,7 @@ var characterClues = ["Catchphrase is 'Doh'",
 //Set the counters for number of wins and number of losses
 var wins = 0
 var losses = 0;
+var livesRemaining = SimpsonsCharacters.length() + 1;
 
 //Declare an empty array for the characters inputted. Add to the array once you guess a letter
 var guesses = [];
