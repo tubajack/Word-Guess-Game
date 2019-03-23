@@ -51,28 +51,31 @@ for(var i = 0; i < SimpsonsCharacters.length; i++){
 var lettersleftforsuccess = SimpsonsCharacters.length;
 
 
-//Display the characters
-var userText = document.getElementById("user-text");
+while(lettersleftforsuccess > 0){
+    //Display the characters
+    var userText = document.getElementById("user-text");
 
-document.onkeyup = function(event){
-    letterguess++;
+    document.onkeyup = function(event){
+        letterguess++;
 
-    if(letterguess === 1){
-        var textnode = document.createTextNode(event.key);
+        if(letterguess === 1){
+            var textnode = document.createTextNode(event.key);
+        }
+        else{
+            var textnode = document.createTextNode("," + event.key);
+        }
+
+        userText.appendChild(textnode);
+        
+        //Add on to the guess array
+        guesses.push(event.key);
+
+        //Make all guesses uppercase
+        userText.style.textTransform = "uppercase";
     }
-    else{
-        var textnode = document.createTextNode("," + event.key);
-    }
-
-    userText.appendChild(textnode);
-    
-    //Add on to the guess array
-    guesses.push(event.key);
-
-    //Make all guesses uppercase
-    userText.style.textTransform = "uppercase";
-
 }
+
+
 
 
 
