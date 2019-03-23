@@ -2,6 +2,7 @@
 var SimpsonsCharacters = ["Homer", "Marge", "Bart", "Lisa", "Maggie", "Abe Simpson", "Ralph Wiggum", "Milhouse", "Mr Burns", "Moe Syzlak", 
 "Principal Skinner","Groundskeeper Willie", "Patty", "Selma", "Nelson", "Edna Krabappel"];
 
+//Display all of the user clues
 var characterClues = ["Catchphrase is 'Doh'", 
 "Has tall blue hair", 
 "Mischievous prankster. Son of Homer and Marge", 
@@ -30,10 +31,16 @@ var guesses = [];
 var letterguess = 0;
 
 
+//Create variables for holding references to where we display things in HTML
+var wordGuessLength = document.getElementById("word-guess");
+var clueGiven = document.getElementById("clues-text");
+var winsText = document.getElementById("wins-text");
+var lossesText = document.getElementById("losses-text");
+var livesRemaining = document.getElementById("livesremaining-text");
+
+
 //Display the characters
 var userText = document.getElementById("user-text");
-//console.log(userText);
-
 
 document.onkeyup = function(event){
     letterguess++;
