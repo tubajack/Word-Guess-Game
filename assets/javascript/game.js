@@ -38,6 +38,9 @@ var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
 var livesRemaining = document.getElementById("livesremaining-text");
 
+//Pick a random character for the Simpson's trivia game
+var randomGuess = SimpsonsCharacters[Math.floor(Math.random() * SimpsonsCharacters.length)];
+
 
 //Display the characters
 var userText = document.getElementById("user-text");
