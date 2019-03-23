@@ -1,6 +1,6 @@
 //Display a list of the Simpsons Characters
-var SimpsonsCharacters = ["Homer", "Marge", "Bart", "Lisa", "Maggie", "Abe Simpson", "Ralph Wiggum", "Milhouse", "Mr Burns", "Moe Syzlak", 
-"Principal Skinner","Groundskeeper Willie", "Patty", "Selma", "Nelson", "Edna Krabappel"];
+var SimpsonsCharacters = ["HOMER", "MARGE", "BART", "LISA", "MAGGIE", "ABE SIMPSON", "RALPH WIGGUM", "MILHOUSE", "MR BURNS", "MOE SYZLAK", 
+"PRINCIPAL SKINNER","GROUNDSKEEPER WILLIE", "PATTY", "SELMA", "NELSON", "EDNA KRABAPPEL"];
 
 //Display all of the user clues
 var characterClues = ["Catchphrase is 'Doh'", 
@@ -46,6 +46,8 @@ var correctAnswer = [];
 for(var i = 0; i < SimpsonsCharacters.length; i++){
     correctAnswer[i] = '_';
 }
+
+//Display to the u
 
 
 //Display the characters
