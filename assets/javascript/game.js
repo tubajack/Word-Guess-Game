@@ -41,6 +41,12 @@ var livesRemaining = document.getElementById("livesremaining-text");
 //Pick a random character for the Simpson's trivia game
 var randomGuess = SimpsonsCharacters[Math.floor(Math.random() * SimpsonsCharacters.length)];
 
+//Display the underscore dashes which happen before the game starts
+var correctAnswer = [];
+for(var i = 0; i < SimpsonsCharacters.length; i++){
+    correctAnswer[i] = '_';
+}
+
 
 //Display the characters
 var userText = document.getElementById("user-text");
@@ -52,11 +58,9 @@ document.onkeyup = function(event){
         var textnode = document.createTextNode(event.key);
     }
     else{
-        //var node = document.createElement("DIV");
         var textnode = document.createTextNode("," + event.key);
     }
 
-    //node.appendChild(textnode);
     userText.appendChild(textnode);
     
     //Add on to the guess array
