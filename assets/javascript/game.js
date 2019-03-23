@@ -47,7 +47,8 @@ for(var i = 0; i < SimpsonsCharacters.length; i++){
     correctAnswer[i] = '_';
 }
 
-//Display to the u
+//Display how many letters are left to guess
+var lettersleftforsuccess = SimpsonsCharacters.length;
 
 
 //Display the characters
@@ -71,9 +72,6 @@ document.onkeyup = function(event){
     //Make all guesses uppercase
     userText.style.textTransform = "uppercase";
 
-    for(var i = 0; i < guesses.length; i++){
-        //console.log(guesses[i]);
-    }
 }
 
 
