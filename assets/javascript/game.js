@@ -43,6 +43,14 @@ var letterguess = 0;
 var randomGuess = SimpsonsCharacters[Math.floor(Math.random() * SimpsonsCharacters.length)];
 console.log(randomGuess);
 
+var length = 0; 
+for(var i = 0; i < randomGuess.length; i++){
+    if(randomGuess[i] !== " "){
+        length++;
+    }
+}
+console.log(length);
+
 //Display the underscore dashes which happen before the game starts
 /*var correctAnswer = [];
 for(var i = 0; i < SimpsonsCharacters.length; i++){
