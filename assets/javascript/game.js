@@ -25,7 +25,7 @@ var characterClues = ["Catchphrase is 'Doh'",
 //Set the counters for number of wins and number of losses
 var wins = 0
 var losses = 0;
-var livesRemaining = SimpsonsCharacters.length() + 1;
+//var livesRemaining = SimpsonsCharacters.length() + 1;
 
 //Declare an empty array for the characters inputted. Add to the array once you guess a letter
 var guesses = [];
@@ -33,47 +33,53 @@ var letterguess = 0;
 
 
 //Create variables for holding references to where we display things in HTML
-var wordGuessLength = document.getElementById("word-guess");
-var clueGiven = document.getElementById("clues-text");
-var winsText = document.getElementById("wins-text");
-var lossesText = document.getElementById("losses-text");
-var livesRemaining = document.getElementById("livesremaining-text");
+//var wordGuessLength = document.getElementById("word-guess");
+//var clueGiven = document.getElementById("clues-text");
+//var winsText = document.getElementById("wins-text");
+//var lossesText = document.getElementById("losses-text");
+//var livesRemaining = document.getElementById("livesremaining-text");
 
 //Pick a random character for the Simpson's trivia game
 var randomGuess = SimpsonsCharacters[Math.floor(Math.random() * SimpsonsCharacters.length)];
+console.log(randomGuess);
 
 //Display the underscore dashes which happen before the game starts
-var correctAnswer = [];
+/*var correctAnswer = [];
 for(var i = 0; i < SimpsonsCharacters.length; i++){
     correctAnswer[i] = '_';
-}
+}*/
 
 //Display how many letters are left to guess
-var lettersleftforsuccess = SimpsonsCharacters.length;
+//var lettersleftforsuccess = SimpsonsCharacters.length;
 
 
-while(lettersleftforsuccess > 0){
-    //Display the characters
-    var userText = document.getElementById("user-text");
+//while(lettersleftforsuccess > 0){
+//}
 
-    document.onkeyup = function(event){
-        letterguess++;
+//Display the characters
 
-        if(letterguess === 1){
-            var textnode = document.createTextNode(event.key);
-        }
-        else{
-            var textnode = document.createTextNode("," + event.key);
-        }
+if(String.fromCharCode() >= 65 && String.fromCharCode() <= 90){
+    
+}
+var userText = document.getElementById("user-text");
 
-        userText.appendChild(textnode);
-        
-        //Add on to the guess array
-        guesses.push(event.key);
+document.onkeyup = function(event){
+    letterguess++;
 
-        //Make all guesses uppercase
-        userText.style.textTransform = "uppercase";
+    if(letterguess === 1){
+        var textnode = document.createTextNode(event.key);
     }
+    else{
+        var textnode = document.createTextNode("," + event.key);
+    }
+
+    userText.appendChild(textnode);
+        
+    //Add on to the guess array
+    guesses.push(event.key);
+
+    //Make all guesses uppercase
+    userText.style.textTransform = "uppercase";
 }
 
 
