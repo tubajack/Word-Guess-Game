@@ -34,16 +34,18 @@ var letterguess = 0;
 
 
 //Create variables for holding references to where we display things in HTML
-//var wordGuessLength = document.getElementById("word-guess");
-//var clueGiven = document.getElementById("clues-text");
-//var winsText = document.getElementById("wins-text");
-//var lossesText = document.getElementById("losses-text");
-//var livesRemaining = document.getElementById("livesremaining-text");
+var wordGuessLength = document.getElementById("word-guess");
+var clueGiven = document.getElementById("clues-text");
+var winsText = document.getElementById("wins-text");
+var lossesText = document.getElementById("losses-text");
+var livesRemaining = document.getElementById("livesremaining-text");
 
 //Pick a random character for the Simpson's trivia game
 var randomGuess = SimpsonsCharacters[Math.floor(Math.random() * SimpsonsCharacters.length)];
 console.log(randomGuess);
 
+//This code is being written out so that the space bar doesn't count as a character. 
+//This is the length not including the space bar character. 
 var length = 0; 
 for(var i = 0; i < randomGuess.length; i++){
     if(randomGuess[i] !== " "){
@@ -51,6 +53,9 @@ for(var i = 0; i < randomGuess.length; i++){
     }
 }
 console.log(length);
+
+//Declare a lives remaining variable
+var livesRemaining = length + 1;
 
 //Display the underscore dashes which happen before the game starts
 /*var correctAnswer = [];
@@ -67,9 +72,7 @@ for(var i = 0; i < SimpsonsCharacters.length; i++){
 
 //Display the characters
 
-if(String.fromCharCode() >= 65 && String.fromCharCode() <= 90){
-    
-}
+
 var userText = document.getElementById("user-text");
 
 document.onkeyup = function(event){
@@ -90,6 +93,14 @@ document.onkeyup = function(event){
     //Make all guesses uppercase
     userText.style.textTransform = "uppercase";
 }
+
+
+//Display all necessary information
+wordGuessLength.textContent = "The word you are guessing is " + length + " characters long.";
+clueGiven.textContent = "Clue Given: ";
+winsText.textContent = "Wins: " + wins;
+lossesText.textContent = "Losses: " + losses;
+livesRemaining.textContent = "Lives Remaining: ";
 
 
 
