@@ -35,6 +35,7 @@ var letterguess = 0;
 
 //Create variables for holding references to where we display things in HTML
 var wordGuessLength = document.getElementById("word-guess");
+var randomGuess = document.getElementById("random-guess");
 var clueGiven = document.getElementById("clues-text");
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
@@ -70,14 +71,28 @@ for(var i = 0; i < SimpsonsCharacters.length; i++){
 //while(lettersleftforsuccess > 0){
 //}
 
-//Display the characters
 
+
+//This array is to tell the user what letters have already been guessed
+var alreadyGuessed = [];
 
 var userText = document.getElementById("user-text");
 
 document.onkeyup = function(event){
-    letterguess++;
+    //letterguess++;
+    var keyPress = event.key.toUpperCase();
 
+    if(possibleguesses.includes(keyPress)){
+        //Make sure it has not already been guessed
+        if(!alreadyGuessed.includes(keyPress)){
+            alreadyGuessed.push(keyPress);
+
+            if(randomGuess.includes(keyPress)){
+                //replace the dashes with the letter
+            }
+        }
+    }
+    letterguess++;
     if(letterguess === 1){
         var textnode = document.createTextNode(event.key);
     }
@@ -97,6 +112,7 @@ document.onkeyup = function(event){
 
 //Display all necessary information
 wordGuessLength.textContent = "The word you are guessing is " + length + " characters long.";
+randomGuess.textContent = "The word is: " + randomGuess;
 clueGiven.textContent = "Clue Given: ";
 winsText.textContent = "Wins: " + wins;
 lossesText.textContent = "Losses: " + losses;
