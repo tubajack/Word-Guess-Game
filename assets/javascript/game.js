@@ -28,6 +28,7 @@ var losses = 0;
 //var livesRemaining = SimpsonsCharacters.length() + 1;
 
 //Declare an empty array for the characters inputted. Add to the array once you guess a letter
+var possibleguesses = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var guesses = [];
 var letterguess = 0;
 
