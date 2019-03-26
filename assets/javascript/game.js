@@ -91,22 +91,23 @@ document.onkeyup = function(event){
                 //replace the dashes with the letter
             }
         }
-    }
-    letterguess++;
-    if(letterguess === 1){
-        var textnode = document.createTextNode(event.key);
-    }
-    else{
-        var textnode = document.createTextNode("," + event.key);
-    }
 
-    userText.appendChild(textnode);
-        
-    //Add on to the guess array
-    guesses.push(event.key);
+        letterguess++;
+        if(letterguess === 1){
+            var textnode = document.createTextNode(event.key);
+        }
+        else{
+            var textnode = document.createTextNode("," + event.key);
+        }
 
-    //Make all guesses uppercase
-    userText.style.textTransform = "uppercase";
+        userText.appendChild(textnode);
+            
+        //Add on to the guess array
+        guesses.push(event.key);
+
+        //Make all guesses uppercase
+        userText.style.textTransform = "uppercase";
+        }   
 }
 
 
