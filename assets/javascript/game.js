@@ -58,6 +58,7 @@ console.log(length);
 //Declare a lives remaining variable
 var livesRemaining = length + 1;
 
+
 //Display the underscore dashes which happen before the game starts
 /*var correctAnswer = [];
 for(var i = 0; i < SimpsonsCharacters.length; i++){
@@ -90,24 +91,25 @@ document.onkeyup = function(event){
             if(randomGuess.includes(keyPress)){
                 //replace the dashes with the letter
             }
-        }
 
-        letterguess++;
-        if(letterguess === 1){
-            var textnode = document.createTextNode(event.key);
-        }
-        else{
-            var textnode = document.createTextNode("," + event.key);
-        }
 
-        userText.appendChild(textnode);
-            
-        //Add on to the guess array
-        guesses.push(event.key);
+            letterguess++;
+            if(letterguess === 1){
+                var textnode = document.createTextNode(event.key);
+            }
+            else{
+                var textnode = document.createTextNode("," + event.key);
+            }
 
-        //Make all guesses uppercase
-        userText.style.textTransform = "uppercase";
-        }   
+            userText.appendChild(textnode);
+                
+            //Add on to the guess array
+            guesses.push(event.key);
+
+            //Make all guesses uppercase
+            userText.style.textTransform = "uppercase";
+        }
+    }   
 }
 
 
@@ -117,7 +119,7 @@ randomGuess.textContent = "The word is: " + randomGuess;
 clueGiven.textContent = "Clue Given: ";
 winsText.textContent = "Wins: " + wins;
 lossesText.textContent = "Losses: " + losses;
-livesRemaining.textContent = "Lives Remaining: ";
+livesRemaining.textContent = "Lives Remaining: " + livesRemaining;
 
 
 
