@@ -35,7 +35,7 @@ var letterguess = 0;
 
 //Create variables for holding references to where we display things in HTML
 var wordGuessLength = document.getElementById("word-guess");
-var randomGuess = document.getElementById("random-guess");
+var randomGuessDiv = document.getElementById("random-guess");
 var clueGiven = document.getElementById("clues-text");
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
@@ -114,7 +114,7 @@ document.onkeyup = function(event){
 
 //Display all necessary information
 wordGuessLength.textContent = "The word you are guessing is " + length + " characters long.";
-randomGuess.textContent = "The word is: " + randomGuess;
+randomGuessDiv.textContent = "The word is: " + correctAnswer.join(" ");
 clueGiven.textContent = "Clue Given: ";
 winsText.textContent = "Wins: " + wins;
 lossesText.textContent = "Losses: " + losses;
