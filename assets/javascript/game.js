@@ -89,7 +89,16 @@ document.onkeyup = function(event){
             alreadyGuessed.push(keyPress);
 
             if(randomGuess.includes(keyPress)){
-                
+                //Replace the dashes with the letter guessed
+                for(var j = 0; j < randomGuess.length; j++){
+                    //Replace the dash with the letter if and only if it is a match
+                    if(randomGuess[j] === keyPress){
+                        //Replace the dash with that letter
+                        correctAnswer[j] = keyPress;
+                        randomGuessDiv.textContent = "The word is: " + correctAnswer.join(" ");
+                    }
+
+                }
             }
 
             letterguess++;
