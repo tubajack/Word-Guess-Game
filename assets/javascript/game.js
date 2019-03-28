@@ -41,36 +41,36 @@ var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
 var livesRemaining = document.getElementById("livesremaining-text");
 
+
+
+livesRemaining.textContent = "Lives Remaining: ";
+
 //Pick a random character for the Simpson's trivia game
 var randomGuess = SimpsonsCharacters[Math.floor(Math.random() * SimpsonsCharacters.length)];
 console.log(randomGuess);
 
+
+
 //This code is being written out so that the space bar doesn't count as a character. 
 //This is the length not including the space bar character. 
 var length = 0; 
+var correctAnswer = [];
+
 for(var i = 0; i < randomGuess.length; i++){
     if(randomGuess[i] !== " "){
         length++;
+        correctAnswer.push("_");
+    }
+    else{
+        correctAnswer.push(" ");
     }
 }
 console.log(length);
+console.log(correctAnswer);
 
 //Declare a lives remaining variable
-var livesRemaining = length + 1;
+var livesRemaining2 = length + 1;
 
-
-//Display the underscore dashes which happen before the game starts
-/*var correctAnswer = [];
-for(var i = 0; i < SimpsonsCharacters.length; i++){
-    correctAnswer[i] = '_';
-}*/
-
-//Display how many letters are left to guess
-//var lettersleftforsuccess = SimpsonsCharacters.length;
-
-
-//while(lettersleftforsuccess > 0){
-//}
 
 
 
@@ -89,9 +89,8 @@ document.onkeyup = function(event){
             alreadyGuessed.push(keyPress);
 
             if(randomGuess.includes(keyPress)){
-                //replace the dashes with the letter
+                
             }
-
 
             letterguess++;
             if(letterguess === 1){
@@ -119,7 +118,7 @@ randomGuess.textContent = "The word is: " + randomGuess;
 clueGiven.textContent = "Clue Given: ";
 winsText.textContent = "Wins: " + wins;
 lossesText.textContent = "Losses: " + losses;
-livesRemaining.textContent = "Lives Remaining: " + livesRemaining;
+livesRemaining.textContent = "Lives Remaining: " + livesRemaining2; 
 
 
 
