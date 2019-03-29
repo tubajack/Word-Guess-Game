@@ -120,6 +120,12 @@ document.onkeyup = function(event){
             //Decrement the lives remaining
             livesRemaining2--;
             livesRemaining.textContent = "Lives Remaining: " + livesRemaining2;
+
+            //If lives remaining is equal to 0, add 1 to the loss counter
+            if(livesRemaining2 === 0){
+                losses++;
+                lossesText.textContent = "Losses: " + losses;
+            }
         }
     } 
 }
