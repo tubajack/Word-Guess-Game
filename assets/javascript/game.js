@@ -116,8 +116,12 @@ document.onkeyup = function(event){
 
             //Make all guesses uppercase
             userText.style.textTransform = "uppercase";
+
+            //Decrement the lives remaining
+            livesRemaining2--;
+            livesRemaining.textContent = "Lives Remaining: " + livesRemaining2;
         }
-    }   
+    } 
 }
 
 
