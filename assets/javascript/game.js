@@ -46,25 +46,28 @@ var livesRemaining = document.getElementById("livesremaining-text");
 livesRemaining.textContent = "Lives Remaining: ";
 
 //Pick a random character for the Simpson's trivia game
+//The random guess is a string. 
 var randomGuess = SimpsonsCharacters[Math.floor(Math.random() * SimpsonsCharacters.length)];
-console.log(randomGuess);
+
 
 
 
 //This code is being written out so that the space bar doesn't count as a character. 
 //This is the length not including the space bar character. 
 var length = 0; 
-var correctAnswer = [];
+var correctAnswer = "";
 
 for(var i = 0; i < randomGuess.length; i++){
     if(randomGuess[i] !== " "){
         length++;
-        correctAnswer.push("_");
+        correctAnswer += "_";
     }
     else{
-        correctAnswer.push(" ");
+        correctAnswer += " ";
     }
 }
+
+randomGuessDiv.textContent = "The word is: " + correctAnswer;
 console.log(length);
 console.log(correctAnswer);
 
@@ -94,12 +97,26 @@ document.onkeyup = function(event){
                     //Replace the dash with the letter if and only if it is a match
                     if(randomGuess[j] === keyPress){
                         //Replace the dash with that letter
-                        correctAnswer[j] = keyPress;
-                        randomGuessDiv.textContent = "The word is: " + correctAnswer.join(" ");
-                    }
 
+                        correctAnswer = correctAnswer.split("");
+                        correctAnswer[j] = keyPress;
+                        correctAnswer = correctAnswer.join("");
+
+                        randomGuessDiv.textContent = "The word is: " + correctAnswer;
+                        console.log(randomGuess);
+                        console.log(correctAnswer);
+                        
+
+                        //If the word is successfully guessed, add 1 to the wins counter
+                        if((correctAnswer === randomGuess) && (livesRemaining2 > 0)){
+                            //correctAnswer = correctAnswer.join();
+                            wins++;
+                            winsText.textContent = "Wins: " + wins;
+                        } 
+                    }
                 }
             }
+           
 
             letterguess++;
             if(letterguess === 1){
@@ -126,14 +143,19 @@ document.onkeyup = function(event){
                 losses++;
                 lossesText.textContent = "Losses: " + losses;
                 reset();
+                randomGuess;
             }
+
+            
+
+            
         }
     } 
 }
 
 //Display all necessary information
 wordGuessLength.textContent = "The word you are guessing is " + length + " characters long.";
-randomGuessDiv.textContent = "The word is: " + correctAnswer.join(" ");
+randomGuessDiv.textContent = "The word is: " + correctAnswer;
 clueGiven.textContent = "Clue Given: ";
 winsText.textContent = "Wins: " + wins;
 lossesText.textContent = "Losses: " + losses;
