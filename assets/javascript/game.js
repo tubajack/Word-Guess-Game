@@ -29,7 +29,7 @@ var losses = 0;
 
 //Declare an empty array for the characters inputted. Add to the array once you guess a letter
 var possibleguesses = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-var guesses = [];
+//var guesses = [];
 var letterguess = 0;
 
 
@@ -112,7 +112,7 @@ document.onkeyup = function(event){
             userText.appendChild(textnode);
                 
             //Add on to the guess array
-            guesses.push(event.key);
+            alreadyGuessed.push(event.key);
 
             //Make all guesses uppercase
             userText.style.textTransform = "uppercase";
@@ -125,11 +125,11 @@ document.onkeyup = function(event){
             if(livesRemaining2 === 0){
                 losses++;
                 lossesText.textContent = "Losses: " + losses;
+                reset();
             }
         }
     } 
 }
-
 
 //Display all necessary information
 wordGuessLength.textContent = "The word you are guessing is " + length + " characters long.";
@@ -138,6 +138,13 @@ clueGiven.textContent = "Clue Given: ";
 winsText.textContent = "Wins: " + wins;
 lossesText.textContent = "Losses: " + losses;
 livesRemaining.textContent = "Lives Remaining: " + livesRemaining2; 
+
+
+//Create a reset function
+function reset(){
+    var alreadyGuessed = [];
+    livesRemaining2 = length + 1;
+}
 
 
 
