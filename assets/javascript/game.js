@@ -37,7 +37,6 @@ var letterguess = 0;
 var wordGuessLength = document.getElementById("word-guess");
 var randomGuessDiv = document.getElementById("random-guess");
 var gameResult = document.getElementById("game-result");
-var clueGiven = document.getElementById("clues-text");
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
 var livesRemaining = document.getElementById("livesremaining-text");
@@ -49,14 +48,14 @@ livesRemaining.textContent = "Lives Remaining: ";
 //Pick a random character for the Simpson's trivia game
 //The random guess is a string. 
 var randomGuess = SimpsonsCharacters[Math.floor(Math.random() * SimpsonsCharacters.length)];
-
-
+console.log(randomGuess);
 
 
 //This code is being written out so that the space bar doesn't count as a character. 
 //This is the length not including the space bar character. 
 var length = 0; 
 var correctAnswer = "";
+
 
 for(var i = 0; i < randomGuess.length; i++){
     if(randomGuess[i] !== " "){
@@ -160,7 +159,6 @@ document.onkeyup = function(event){
 //Display all necessary information
 wordGuessLength.textContent = "The word you are guessing is " + length + " characters long.";
 randomGuessDiv.textContent = "The word is: " + correctAnswer;
-clueGiven.textContent = "Clue Given: ";
 winsText.textContent = "Wins: " + wins;
 lossesText.textContent = "Losses: " + losses;
 livesRemaining.textContent = "Lives Remaining: " + livesRemaining2; 
@@ -168,10 +166,24 @@ livesRemaining.textContent = "Lives Remaining: " + livesRemaining2;
 
 //Create a reset function
 function reset(){
+
     //Reset the word, previous inputs, and lives remaining
+    alreadyGuessed = [];
+    correctAnswer = "";
+
+    randomGuess = SimpsonsCharacters[Math.floor(Math.random() * SimpsonsCharacters.length)];
+     
+
+    console.log(randomGuess);
+    console.log(length);
+
+    livesRemaining2 = length + 1;
+
+    wordGuessLength.textContent = "The word you are guessing is " + length + " characters long.";
+    randomGuessDiv.textContent = correctAnswer;
+
+   
     
-    //Generate a new word
-    randomGuessDiv.textContent = "The word is: " + correctAnswer;
     
 }
 
