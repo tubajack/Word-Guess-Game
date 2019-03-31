@@ -172,6 +172,17 @@ function reset(){
     correctAnswer = "";
 
     randomGuess = SimpsonsCharacters[Math.floor(Math.random() * SimpsonsCharacters.length)];
+
+    length = 0;
+    for(var i = 0; i < randomGuess.length; i++){
+        if(randomGuess[i] !== " "){
+            length++;
+            correctAnswer += "_";
+        }
+        else{
+            correctAnswer += " ";
+        }
+    }
      
 
     console.log(randomGuess);
