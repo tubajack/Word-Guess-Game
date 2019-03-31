@@ -36,6 +36,7 @@ var letterguess = 0;
 //Create variables for holding references to where we display things in HTML
 var wordGuessLength = document.getElementById("word-guess");
 var randomGuessDiv = document.getElementById("random-guess");
+var gameResult = document.getElementById("game-result");
 var clueGiven = document.getElementById("clues-text");
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
@@ -110,9 +111,13 @@ document.onkeyup = function(event){
                         //If the word is successfully guessed, add 1 to the wins counter
                         if((correctAnswer === randomGuess) && (livesRemaining2 > 0)){
                             //correctAnswer = correctAnswer.join();
+                            gameResult.textContent = "Congratulations. You have won this round!";
                             wins++;
                             winsText.textContent = "Wins: " + wins;
+                            reset();
                         } 
+
+                        
                     }
                 }
             }
@@ -138,15 +143,14 @@ document.onkeyup = function(event){
             livesRemaining2--;
             livesRemaining.textContent = "Lives Remaining: " + livesRemaining2;
 
+
             //If lives remaining is equal to 0, add 1 to the loss counter
             if(livesRemaining2 === 0){
+                gameResult.textContent = "Sorry, you lost. Better luck next time.";
                 losses++;
                 lossesText.textContent = "Losses: " + losses;
                 reset();
-                randomGuess;
             }
-
-            
 
             
         }
@@ -164,8 +168,11 @@ livesRemaining.textContent = "Lives Remaining: " + livesRemaining2;
 
 //Create a reset function
 function reset(){
-    var alreadyGuessed = [];
-    livesRemaining2 = length + 1;
+    //Reset the word, previous inputs, and lives remaining
+    
+    //Generate a new word
+    randomGuessDiv.textContent = "The word is: " + correctAnswer;
+    
 }
 
 
