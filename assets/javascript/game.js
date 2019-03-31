@@ -56,7 +56,6 @@ console.log(randomGuess);
 var length = 0; 
 var correctAnswer = "";
 
-
 for(var i = 0; i < randomGuess.length; i++){
     if(randomGuess[i] !== " "){
         length++;
@@ -169,6 +168,7 @@ function reset(){
 
     //Reset the word, previous inputs, and lives remaining
     alreadyGuessed = [];
+    //userText = "";
     correctAnswer = "";
 
     randomGuess = SimpsonsCharacters[Math.floor(Math.random() * SimpsonsCharacters.length)];
@@ -192,6 +192,7 @@ function reset(){
 
     wordGuessLength.textContent = "The word you are guessing is " + length + " characters long.";
     randomGuessDiv.textContent = correctAnswer;
+    livesRemaining.textContent = "Lives Remaining: " + livesRemaining2;
 
    
     
